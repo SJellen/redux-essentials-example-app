@@ -1,8 +1,10 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit'
+import { sub } from 'date-fns'
 
 const initialState = [
-    { id: '1', title: 'First Post!', content: 'Hello!'},
-    { id: '2', title: 'Second Post!', content: 'More text'}
+    { id: '1', title: 'First Post!', content: 'Hello!', date: sub(new Date(), { minutes: 10 }).toString()},
+    { id: '2', title: 'Second Post!', content: 'More text', date: sub(new Date(), { minutes: 7 }).toString()},
+    { id: '3', title: 'Third Post!', content: 'More text, more text', date: sub(new Date(), { minutes: 3 }).toString()}
     
 ]
 
@@ -18,6 +20,7 @@ const postsSlice = createSlice({
             return {
                 payload: {
                     id: nanoid(),
+                    date: new Date().toISOString(),
                     title,
                     content,
                     user: userId
