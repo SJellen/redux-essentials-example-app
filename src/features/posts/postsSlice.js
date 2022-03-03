@@ -16,7 +16,7 @@ const postsSlice = createSlice({
             const { postId, reaction } = action.payload
             const existingPost = state.find(post => post.id === postId)
             if (existingPost) {
-                existingPost.reaction[reaction]++
+                existingPost.reactions[reaction]++
             }
         },
         postAdded: {
