@@ -29,7 +29,7 @@ export const SinglePostPage = ({ match }) => {
             </div>
             <h2>{post.title}</h2>
             <p className="post-content">{post.content}</p>
-            {/* <ReactionButtons post={post} /> */}
+            <ReactionButtons post={post} />
             <Link to={`/editPost/${post.id}`} className="button" >Edit Post</Link>
         </article>
     </section>
