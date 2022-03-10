@@ -27,7 +27,7 @@ const PostExcerpt = ({ post }) => {
 export const PostsList = () => {
     const dispatch = useDispatch()
     const posts = useSelector(selectAllPosts)
-
+    
     const postStatus = useSelector(state => state.post.status)
     const error = useSelector(state => state.posts.error)
 
