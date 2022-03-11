@@ -1,8 +1,5 @@
-import { add } from 'date-fns'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { postAdded } from './postsSlice'
-
 import { addNewPost } from './postsSlice'
 
 export const AddPostForm = () => {

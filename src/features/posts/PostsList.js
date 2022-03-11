@@ -28,7 +28,7 @@ export const PostsList = () => {
     const dispatch = useDispatch()
     const posts = useSelector(selectAllPosts)
     
-    const postStatus = useSelector(state => state.post.status)
+    const postStatus = useSelector(state => state.posts.status)
     const error = useSelector(state => state.posts.error)
 
     useEffect(() => {

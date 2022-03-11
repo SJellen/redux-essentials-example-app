@@ -25,29 +25,29 @@ const postsSlice = createSlice({
     name: 'posts',
     initialState,
     reducers: {
-        postAdded: {
-            reducer(state, action) {
-                state.posts.push(action.payload)
-            },
-            prepare(title, content, userId) {
-            return {
-                payload: {
-                    id: nanoid(),
-                    date: new Date().toISOString(),
-                    title,
-                    content,
-                    user: userId,
-                    reactions: {
-                        thumbsUp: 0,
-                        hooray: 0,
-                        heart: 0,
-                        rocket: 0,
-                        eyes: 0
-                    }
-                }
-            }
-        }
-        },
+        // postAdded: {
+        //     reducer(state, action) {
+        //         state.posts.push(action.payload)
+        //     },
+        //     prepare(title, content, userId) {
+        //     return {
+        //         payload: {
+        //             id: nanoid(),
+        //             date: new Date().toISOString(),
+        //             title,
+        //             content,
+        //             user: userId,
+        //             reactions: {
+        //                 thumbsUp: 0,
+        //                 hooray: 0,
+        //                 heart: 0,
+        //                 rocket: 0,
+        //                 eyes: 0
+        //             }
+        //         }
+        //     }
+        // }
+        // },
         reactionAdded(state, action) {
             const { postId, reaction } = action.payload
             const existingPost = state.posts.find(post => post.id === postId)
